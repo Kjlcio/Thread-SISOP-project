@@ -34,7 +34,7 @@ public class ClientHandler implements Runnable {
        	} catch (InterruptedException e) {
        	    e.printStackTrace();
        	}
-          //  SHUTDOWN COMMAND
+          //  comando di shutdown
           if (requestLine != null && requestLine.contains("GET /exit")) {
               String response = "HTTP/1.1 200 OK\r\n" +
                                 "Content-Type: text/html\r\n\r\n" +

@@ -35,12 +35,12 @@ public class MainServer {
           e.printStackTrace();
       }
   }
-  // Metodo chiamato da /exit
+
   public static void stopServer(ServerSocket serverSocket, ExecutorService pool) {
       System.out.println("Shutdown richiesto via /exit...");
       running = false;
       try {
-          serverSocket.close(); // sblocca accept()
+          serverSocket.close();
       } catch (IOException e) {
           e.printStackTrace();
       }
